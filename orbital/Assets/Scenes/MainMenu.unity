@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &280520331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373911765129941ed8c3b79f5f1640c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Gameplay
 --- !u!114 &280520332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,8 +372,8 @@ RectTransform:
   m_Children:
   - {fileID: 1124296339}
   - {fileID: 1759610750}
-  - {fileID: 1934627049}
   - {fileID: 2016551601}
+  - {fileID: 1934627049}
   - {fileID: 1077460231}
   - {fileID: 333907399}
   - {fileID: 1200290083}
@@ -784,7 +783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373911765129941ed8c3b79f5f1640c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Gameplay
 --- !u!114 &785565430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1797,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1601234903}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1866,7 +1864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1601234899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,7 +1963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373911765129941ed8c3b79f5f1640c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Gameplay
 --- !u!224 &1670605923 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8235583551267415449, guid: 1abbc0d2887764b3f87be0352a4cadda, type: 3}
@@ -2470,7 +2467,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 280520335}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

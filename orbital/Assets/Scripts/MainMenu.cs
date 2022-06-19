@@ -5,43 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string firstLevel;
-
-    // Start is called before the first frame update
-    void Start()
+    public void NextScene()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(firstLevel);             
-
-    }
-
-    public void OpenHowToPlay()
-    {
-
-    }
-
-    public void CloseHowToPlay()
-    {
-
-    }
-
-    public void OpenMoreInfo()
-    {
-
-    }
-
-    public void CloseMoreInfo()
-    {
-
+        // load next scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);             
     }
 }
