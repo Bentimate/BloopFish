@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/EndingMenu.unity
     guid: e90ff543cfca8e54b9b8707ca7cbecfd
   - enabled: 1
-    path: Assets/Scenes/LeaderboardScene.unity
+    path: Assets/Scenes/Highscore.unity
     guid: aeae92a113c074c5c8e41415b7f8bf11
   m_configObjects: {}
