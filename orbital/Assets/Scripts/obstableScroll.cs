@@ -9,7 +9,7 @@ public class obstableScroll : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -0.7f);
+        rb.velocity = new Vector2(0, -1f);
     }
 
     // Update is called once per frame
