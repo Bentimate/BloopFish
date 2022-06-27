@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour
         }
 
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        this.timerText.text = time.ToString(@"mm\:ss\:ff");
+        timerText.text = time.ToString(@"mm\:ss\:ff");
     }
 
     public void StartTime()
