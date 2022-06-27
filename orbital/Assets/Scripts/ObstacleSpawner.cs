@@ -19,5 +19,4 @@ public class ObstacleSpawner : MonoBehaviour {
             gameObject.SetActive(false);
         }
     }
-
 }

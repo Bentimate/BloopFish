@@ -14,7 +14,7 @@ public class BackgroundScroller : MonoBehaviour
     {
         box = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
-        height = box.size.y; //get width
+        height = box.size.y; //get height
         box.enabled = false;
         rb.velocity = new Vector2(0, scrollSpeed); //set scroll speed
     }
@@ -22,7 +22,6 @@ public class BackgroundScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (transform.position.y < -height) {
             Vector2 resetPosition = new Vector2(0, height * 2);
             transform.position = (Vector2) transform.position + resetPosition;

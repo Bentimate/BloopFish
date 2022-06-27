@@ -2,51 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using TMPro;
 
 // Score is calculated from time (stopwatch) (Score = 124 x time on stopwatch)
 public class Timer : MonoBehaviour
 {
-    public bool timerActive;
-
-    public float timeStart;
-    public Text textBox;
-    public float finalTime;
-
-    /* Score
-    int score;
-    public Text scoreText;
-    public float multiplier = 124; */
+    public TMP_Text timerText;
+    private bool timerActive = true;
+    private float currentTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        timerActive = true;
-        // so that currentTime is in seconds
-        textBox.text = timeStart.ToString("F2");
+        this.ResetTime();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timerActive)
-        {
-            timeStart += Time.deltaTime; // account for fps diff
-            textBox.text = timeStart.ToString("F2");
-        }
-        else
-        {
-            finalTime = timeStart;
+        if (timerActive) {
+            currentTime += Time.deltaTime;
         }
 
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        this.timerText.text = time.ToString(@"mm\:ss\:ff");
     }
 
-    /* public void StartStopwatch()
+    public void StartTime()
     {
-        stopwatchActive = true;
+        timerActive = true;
     }
 
-    public void StopStopwatch()
+    public void StopTime()
     {
-        stopwatchActive = false;
-    } */
+        timerActive = false;
+    }
+
+    public void ResetTime()
+    {
+        currentTime = 0;
+    }
+
+    public float CheckTime() 
+    {
+        return currentTime;
+    }
 }
