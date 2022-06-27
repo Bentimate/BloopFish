@@ -25,4 +25,9 @@ public class SceneButtons : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 }

@@ -19,8 +19,8 @@ public class SharkScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var += 0.005;
-        float xVar = (float) Math.Sin(var);
+        var += (double) Time.deltaTime;
+        float xVar = (float) Math.Sin(var * 5);
         rb.velocity = new Vector2(10 * xVar, -speed);
     }
 }
