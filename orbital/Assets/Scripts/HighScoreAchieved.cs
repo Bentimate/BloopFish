@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Highscore : MonoBehaviour
+public class HighScoreAchieved : MonoBehaviour
 {
     // public Text highScore;
     // Timer timer;
