@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneButtons : MonoBehaviour
 {
+    public void HighScore()
+    {
+        SceneManager.LoadScene("Highscore");
+    }
     public void restartButton()
     {
         SceneManager.LoadScene("Gameplay");
