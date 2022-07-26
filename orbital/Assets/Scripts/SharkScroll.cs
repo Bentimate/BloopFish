@@ -2,18 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SharkScroll : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed;
     private double var;
+
+    // audio
+    public AudioSource sharkSound;
+
     // Start is called before the first frame update
     void Start()
     {
         var = 0;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -speed);
+
+        sharkSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,5 +29,16 @@ public class SharkScroll : MonoBehaviour
         var += (double) Time.deltaTime;
         float xVar = (float) Math.Sin(var * 5);
         rb.velocity = new Vector2(10 * xVar, -speed);
+        transform.Rotate(0f, 0f, xVar); //rotation
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            sharkSound.Play();
+            Debug.Log("collide");
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 }

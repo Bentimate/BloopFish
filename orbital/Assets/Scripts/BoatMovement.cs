@@ -17,15 +17,15 @@ public class BoatMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.D)) {
             //transform.Rotate(0, 0, rotation);
             boat.AddTorque(-rotation);
             boat.AddRelativeForce(forward * speed);
         }
 
-        if (Input.GetKeyDown(KeyCode.D)) {
+        if (Input.GetKeyDown(KeyCode.A)) {
             //transform.Rotate(0, 0, -rotation);
             boat.AddTorque(rotation);
             boat.AddRelativeForce(forward * speed);
