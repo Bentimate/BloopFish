@@ -24,6 +24,7 @@ public class Collision : MonoBehaviour
     }
 
     // public GameObject explosion;
+    // when collide, repeat that stage
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             Debug.Log("collide");

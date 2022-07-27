@@ -2289,6 +2289,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8073260941093554384, guid: 16dbbfe494cb10d40ae00fde59aeaf11, type: 3}
+      propertyPath: sharkSound
+      value: 
+      objectReference: {fileID: 1981433869}
     - target: {fileID: 774449272358129358, guid: 16dbbfe494cb10d40ae00fde59aeaf11, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2343,6 +2347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16dbbfe494cb10d40ae00fde59aeaf11, type: 3}
+--- !u!82 &1981433869 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 167072680753029962, guid: 16dbbfe494cb10d40ae00fde59aeaf11, type: 3}
+  m_PrefabInstance: {fileID: 1981433868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1984065159
 PrefabInstance:
   m_ObjectHideFlags: 0
