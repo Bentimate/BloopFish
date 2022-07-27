@@ -9,8 +9,9 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
-    private bool timerActive = true;
+    private bool timerActive = false;
     private float currentTime;
+    public SaveManager save = new SaveManager();
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class Timer : MonoBehaviour
     public void StopTime()
     {
         timerActive = false;
+        save.Add(new Highscore("AAA", currentTime)); 
     }
 
     public void ResetTime()

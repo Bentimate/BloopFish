@@ -5,34 +5,33 @@ using UnityEngine;
 public class SaveManager
 {
     private string filename = "Highscores.txt";
-    private int maxCount = 10;
-    private List<Highscore> hsList = new List<Highscore>();
+    private int maxCount = 5;
 
-    private void Save()
+    public void Save()
     {
-        FileHandler.SaveToJSON<Highscore>(hsList, filename);
+        FileHandler.SaveToJSON<Highscore>(HighscoreStorage.hsList, filename);
     }
 
-    private void Load()
+    public void Load()
     {
-        hsList = FileHandler.ReadListFromJSON<Highscore>(filename);
+        HighscoreStorage.hsList = FileHandler.ReadListFromJSON<Highscore>(filename);
     }
 
     public void Add(Highscore hs) 
     {
         //best score at position 0
         for (int i = 0; i < maxCount; i++) {
-            if (i >= hsList.Count || hs.time > hsList[i].time) { //sus
-                hsList.Insert(i, hs);
+            if (i >= HighscoreStorage.hsList.Count || hs.time < HighscoreStorage.getTime(i)) {
+                HighscoreStorage.hsList.Insert(i, hs);
+                break;
             }
         }
 
         //keeping total entries at 10
-        if (hsList.Count > maxCount) {
-            hsList.RemoveAt(hsList.Count - 1);
+        if (HighscoreStorage.hsList.Count > maxCount) {
+            HighscoreStorage.hsList.RemoveAt(HighscoreStorage.hsList.Count - 1);
         }
 
         Save();
     }
-    
 }

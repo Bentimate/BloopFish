@@ -8,6 +8,8 @@ public class BoatMovement : MonoBehaviour
     private Vector2 forward = new Vector2(0, 1);
     public float speed;
     public float rotation;
+    private bool akey;
+    private bool dkey;
     
     // Start is called before the first frame update
     void Start()

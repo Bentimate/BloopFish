@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class goalEvent : MonoBehaviour
 {
-    // public Timer timer;
+    public GameObject WinUI;
+    public Timer timer;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             Debug.Log("collide");
-            SceneManager.LoadScene("EndingMenu");
-            // Timer.StopTime();
+            timer.StopTime();
+            Time.timeScale = 0;
+            WinUI.SetActive(true);
         } 
     }
 }
