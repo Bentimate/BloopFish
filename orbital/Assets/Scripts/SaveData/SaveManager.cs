@@ -2,36 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveManager
+public static class SaveManager
 {
-    private string filename = "Highscores.txt";
-    private int maxCount = 5;
+    private static int maxCount = 5;
 
-    public void Save()
+    public static void Save(int level, string filename)
     {
-        FileHandler.SaveToJSON<Highscore>(HighscoreStorage.hsList, filename);
+        FileHandler.SaveToJSON<Highscore>(HighscoreStorage.arr[level - 1], filename);
     }
 
-    public void Load()
+    public static void Load(int level, string filename)
     {
-        HighscoreStorage.hsList = FileHandler.ReadListFromJSON<Highscore>(filename);
+        HighscoreStorage.arr[level - 1] = FileHandler.ReadListFromJSON<Highscore>(filename);
     }
 
-    public void Add(Highscore hs) 
+    public static void Add(int level, Highscore hs, string filename) 
     {
         //best score at position 0
         for (int i = 0; i < maxCount; i++) {
-            if (i >= HighscoreStorage.hsList.Count || hs.time < HighscoreStorage.getTime(i)) {
-                HighscoreStorage.hsList.Insert(i, hs);
+            if (i >= HighscoreStorage.arr[level - 1].Count || hs.time < HighscoreStorage.arr[level - 1][i].time) {
+                HighscoreStorage.arr[level - 1].Insert(i, hs);
                 break;
             }
         }
 
-        //keeping total entries at 10
-        if (HighscoreStorage.hsList.Count > maxCount) {
-            HighscoreStorage.hsList.RemoveAt(HighscoreStorage.hsList.Count - 1);
+        //keeping total entries at 5
+        if (HighscoreStorage.arr[level - 1].Count > maxCount) {
+            HighscoreStorage.arr[level - 1].RemoveAt(HighscoreStorage.arr[level - 1].Count - 1);
         }
 
-        Save();
+        Save(level, filename);
     }
 }

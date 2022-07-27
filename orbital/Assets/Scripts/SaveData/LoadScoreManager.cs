@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LoadScoreManager : MonoBehaviour
 {
-    public SaveManager save = new SaveManager();
+    public int level;
+    public string filename;
     void Start()
     {
-        save.Load();
+        SaveManager.Load(level, filename);
     }
 }

@@ -8,10 +8,11 @@ using TMPro;
 // Score is calculated from time (stopwatch) (Score = 124 x time on stopwatch)
 public class Timer : MonoBehaviour
 {
+    public int level;
+    public string filename;
     public TMP_Text timerText;
-    private bool timerActive = false;
+    private bool timerActive = true;
     private float currentTime;
-    public SaveManager save = new SaveManager();
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class Timer : MonoBehaviour
     public void StopTime()
     {
         timerActive = false;
-        save.Add(new Highscore("AAA", currentTime)); 
+        SaveManager.Add(level, new Highscore("AAA", currentTime), filename); 
     }
 
     public void ResetTime()

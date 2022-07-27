@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneButtons : MonoBehaviour
 {
+    public void LoadLevel(int level) {
+        string ind = level.ToString();
+        SceneManager.LoadScene("Level" + " " + ind);
+    }
     public void HighScore()
     {
         SceneManager.LoadScene("Highscore");
     }
     public void restartButton()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void homeButton()

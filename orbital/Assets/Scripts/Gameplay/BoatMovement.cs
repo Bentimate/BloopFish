@@ -23,13 +23,13 @@ public class BoatMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A)) {
             //transform.Rotate(0, 0, rotation);
-            boat.AddTorque(-rotation);
+            boat.AddTorque(rotation);
             boat.AddRelativeForce(forward * speed);
         }
 
         if (Input.GetKeyDown(KeyCode.D)) {
             //transform.Rotate(0, 0, -rotation);
-            boat.AddTorque(rotation);
+            boat.AddTorque(-rotation);
             boat.AddRelativeForce(forward * speed);
         }
     }

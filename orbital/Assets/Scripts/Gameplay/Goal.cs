@@ -9,7 +9,7 @@ public class Goal : MonoBehaviour
     void Start()
     {
         goal = GetComponent<Rigidbody2D>();
-        goal.velocity = new Vector2(0, -1);
+        goal.velocity = new Vector2(0, 0);
     }
 
     // Update is called once per frame
