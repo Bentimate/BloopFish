@@ -5,74 +5,6 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
-    RecentlyUsedSceneGuid-0:
-<<<<<<< HEAD
-      value: 025455035c07080a5c5d0f7247775c45154f1d7e7d7c77652f7e1b6be0e66569
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 0155025504040d5d0f59097644275944454e1a7f2a7977662b711f30b2b6373a
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 0608040003005d080e080f2348260a44144e1a727b7871332c7e1e31e7e3323c
-      flags: 0
-=======
-      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 0608040003005d080e080f2348260a44144e1a727b7871332c7e1e31e7e3323c
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 0155025504040d5d0f59097644275944454e1a7f2a7977662b711f30b2b6373a
-      flags: 0
->>>>>>> parent of 44082c5 (added 3 levels, with working sound)
-    RecentlyUsedSceneGuid-3:
-      value: 550902555c045158550c0e7213700d444e161e737e2a70672b2a1f35b4b5323c
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-<<<<<<< HEAD
-      value: 5a06040352060d0a5c5a0a7142770942154f402c2a7e77687f2d1b60e0e1316f
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-<<<<<<< Updated upstream
-      value: 0700575554055059090c597611270a44154f19782e7a7e63757c4f6be7b66068
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 560151035d040d0e5b0c0977167b0a4447164e787d7976652e7b486ae6b3306a
-=======
-      value: 025455035c07080a5c5d0f7247775c45154f1d7e7d7c77652f7e1b6be0e66569
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 5302055e56065a0e585a587a13770a1443164173742b7566757d4f65e0e4603b
->>>>>>> Stashed changes
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 060206030750515d5c0a0a2149720d44454e197f287c23322c7b486ab2b0316a
-      flags: 0
-    RecentlyUsedSceneGuid-8:
-<<<<<<< Updated upstream
-      value: 0108505204505c080c0a0d7213760744134e4879747f75347d7c4d63b3b8656b
-=======
-      value: 060206030750515d5c0a0a2149720d44454e197f287c23322c7b486ab2b0316a
->>>>>>> Stashed changes
-      flags: 0
-    RecentlyUsedSceneGuid-9:
-      value: 0108505204505c080c0a0d7213760744134e4879747f75347d7c4d63b3b8656b
-      flags: 0
-    UnityEditor.ShaderGraph.Blackboard:
-      value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a5405d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fdaee1e1928b86d888ed909c968797a7cf
-      flags: 0
-    UnityEditor.ShaderGraph.FloatingWindowsLayout2:
-      value: 181344140043005e1a220d3b1f364b524c0c5a27130c293326201334cee5322ca0bd30e8eb293a707b0fd0180b3d0a36fc0d3d04e649500d1002ee0b5dbd1d2c27c00ad113cb1e10e41f1addc80993b98d9884a69ae6d8f0d1cda9e8fbfefaf9f9dea3fdb9ade882f0f7b0e1e380cafbf2c3adc18e9cd285a2908b82ec869c8395949c9483d68a8e97ddbd90bf
-      flags: 0
-    UnityEditor.ShaderGraph.InspectorWindow:
-      value: 18135939215a0a5004000b0e15254b524c1119263f2d6a722016393ce1eb3d36e5d339f9a5602b2e2c07a37e0901373ae01e0008f707250d171df81a53a5485d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fcaee1e1928b86d888ed969b938797a7cf
-=======
-      value: 5302055e56065a0e585a587a13770a1443164173742b7566757d4f65e0e4603b
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 025455035c07080a5c5d0f7247775c45154f1d7e7d7c77652f7e1b6be0e66569
->>>>>>> parent of 44082c5 (added 3 levels, with working sound)
-      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
@@ -81,7 +13,7 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
-  m_DesiredImportWorkerCount: 2
+  m_DesiredImportWorkerCount: 4
   m_StandbyImportWorkerCount: 2
   m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
