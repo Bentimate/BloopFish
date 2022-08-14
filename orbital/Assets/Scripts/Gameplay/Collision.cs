@@ -5,20 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Collision : MonoBehaviour
 {
-    public GameObject loseUI;
-    // public GameObject WinUI;
-    // public Timer timer;
    // public GameObject explosion;
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Obstacle") {
+        if (other.tag == "Player") {
             Debug.Log("collide");
-            Time.timeScale = 0;
-            loseUI.SetActive(true);
+            SceneManager.LoadScene("Gameplay");
         } 
-        // else if (other.tag == "Finish") {
-        //     timer.StopTime();
-        //     Time.timeScale = 0;
-        //     WinUI.SetActive(true);
-        // }
     }
 }
